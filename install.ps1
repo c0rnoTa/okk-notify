@@ -46,7 +46,7 @@ $launchPath = Join-Path $InstallDir 'launch.vbs'
 $action = New-ScheduledTaskAction -Execute 'wscript.exe' -Argument "//B //Nologo `"$launchPath`""
 $trigger = New-ScheduledTaskTrigger -AtLogOn
 # S-1-5-32-545 = BUILTIN\Users (locale-independent)
-$principal = New-ScheduledTaskPrincipal -GroupId 'S-1-5-32-545' -RunLevel Limited -LogonType Group
+$principal = New-ScheduledTaskPrincipal -GroupId 'S-1-5-32-545' -RunLevel Limited
 $settings = New-ScheduledTaskSettingsSet `
     -AllowStartIfOnBatteries `
     -DontStopIfGoingOnBatteries `
