@@ -1,4 +1,4 @@
-#Requires -Version 5.1
+﻿#Requires -Version 5.1
 <#
 .SYNOPSIS
   Фоновый агент: напоминает о перезагрузке ПК по аптайму.
@@ -114,7 +114,7 @@ function Show-RebootAlert {
     $label.Text = $text
     $label.ForeColor = $fore
     $label.BackColor = $back
-    $label.Font = New-Object System.Drawing.Font 'Segoe UI', $fontSize, [System.Drawing.FontStyle]::Bold
+    $label.Font = New-Object System.Drawing.Font('Segoe UI', $fontSize, [System.Drawing.FontStyle]::Bold)
     $label.AutoSize = $false
     $label.TextAlign = 'MiddleCenter'
     $label.Location = New-Object System.Drawing.Point 20, 20
